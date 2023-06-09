@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.1/sweetalert2.min.css
+"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="addCourse">
+    <div class="container">
+      <h1>CRUD System</h1>
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Course Name</label>
+          <input type="text" class="form-control" id="CourseName" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label"
+            >Course Catigory</label
+          >
+          <input type="text" class="form-control" id="CourseCatigory" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"
+            >Course Price</label
+          >
+          <input type="number" class="form-control" id="CoursePrice" />
+        </div>
+
+        <div class="mb-3">
+          <label>Course Description</label>
+          <textarea class="form-control" id="CourseDescription"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label"
+            >Course Capacity</label
+          >
+          <input type="text" class="form-control" id="CourseCapacity" />
+        </div>
+
+        <input type="submit" value="Submit" class="btn btn-primary" disabled id="Submit"></input>
+
+        <button class="btn btn-secondary ms-3" type="reset" id="Clear">
+          Clear
+        </button>
+
+        <input
+          class="form-control mt-5"
+          id="search"
+          placeholder="Search..."
+        />
+
+        <button
+          type="button"
+          class="btn btn-outline-danger mt-5"
+          id="deleteAll"
+        >
+          Delete All
+        </button>
+      </form>
+
+      <table class="table table-triped mt-5">
+        <thead>
+          <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Catigory</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Capacity</td>
+            <td>Update</td>
+            <td>Delete</td>
+          </tr>
+        </thead>
+
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+    <!-- sweet alert  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.7.1/sweetalert2.min.js"></script>
+
+    <!-- custom js  -->
+    <script src="script.js"></script>
+  </body>
+</html>
